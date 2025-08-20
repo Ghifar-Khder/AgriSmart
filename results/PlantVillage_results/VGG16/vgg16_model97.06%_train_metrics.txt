@@ -1,0 +1,12 @@
+Evaluation Results - vgg16_model97.06% - train
+========================================
+Evaluation Time: 3993.38 seconds
+Total Samples: 37991
+
+Overall Metrics:
+Accuracy: 0.9906
+Precision: 0.9899
+Recall: 0.9849
+F1 Score: 0.9871
+
+Confusion matrices saved to evaluation_results

@@ -1,0 +1,72 @@
+=== Tuning GradientBoosting ===
+
+Best Parameters:
+n_estimators: 100  
+learning_rate: 0.05
+max_depth: None    
+min_samples_leaf: 5
+
+Training Performance:
+R2 Score: 0.9958
+MAE: 2287.52
+
+Validation Performance:
+R2 Score: 0.9704
+MAE: 6364.71
+
+Saved best model as GradientBoosting_best.pkl
+==================================================
+
+=== Tuning RandomForest ===
+
+Best Parameters:
+n_estimators: 200
+max_depth: 25
+min_samples_leaf: 1
+
+Training Performance:
+R2 Score: 0.9956
+MAE: 2593.58
+
+Validation Performance:
+R2 Score: 0.9730
+MAE: 6154.02
+
+Saved best model as RandomForest_best.pkl
+==================================================
+
+=== Tuning XGBoost ===
+
+Best Parameters:
+n_estimators: 200
+learning_rate: 0.1
+max_depth: 8
+subsample: 0.8
+
+Training Performance:
+R2 Score: 0.9842
+MAE: 6416.03
+
+Validation Performance:
+R2 Score: 0.9697
+MAE: 8278.06
+
+Saved best model as XGBoost_best.pkl
+==================================================
+
+=== Tuning DecisionTree ===
+
+Best Parameters:
+max_depth: None
+min_samples_leaf: 3
+
+Training Performance:
+R2 Score: 0.9899
+MAE: 3222.84
+
+Validation Performance:
+R2 Score: 0.9660
+MAE: 6433.73
+
+Saved best model as DecisionTree_best.pkl
+==================================================

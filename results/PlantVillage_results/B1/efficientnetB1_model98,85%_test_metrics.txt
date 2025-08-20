@@ -1,0 +1,12 @@
+Evaluation Results - efficientnetB1_model98,85% - test
+========================================
+Evaluation Time: 335.62 seconds
+Total Samples: 8167
+
+Overall Metrics:
+Accuracy: 0.9858
+Precision: 0.9805
+Recall: 0.9827
+F1 Score: 0.9813
+
+Confusion matrices saved to evaluation_results

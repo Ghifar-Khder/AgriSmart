@@ -1,0 +1,12 @@
+Evaluation Results - resnet50_model98.51% - val
+========================================
+Evaluation Time: 381.05 seconds
+Total Samples: 8147
+
+Overall Metrics:
+Accuracy: 0.9885
+Precision: 0.9827
+Recall: 0.9833
+F1 Score: 0.9829
+
+Confusion matrices saved to evaluation_results

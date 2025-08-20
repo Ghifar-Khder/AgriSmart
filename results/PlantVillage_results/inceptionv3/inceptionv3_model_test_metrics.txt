@@ -1,0 +1,12 @@
+Evaluation Results - inceptionv3_model - test
+========================================
+Evaluation Time: 728.60 seconds
+Total Samples: 8167
+
+Overall Metrics:
+Accuracy: 0.8460
+Precision: 0.8200
+Recall: 0.7951
+F1 Score: 0.8021
+
+Confusion matrices saved to evaluation_results

@@ -1,0 +1,12 @@
+Evaluation Results - mobilenetv2_model95,74% - train
+========================================
+Evaluation Time: 850.41 seconds
+Total Samples: 37991
+
+Overall Metrics:
+Accuracy: 0.9864
+Precision: 0.9850
+Recall: 0.9809
+F1 Score: 0.9825
+
+Confusion matrices saved to evaluation_results

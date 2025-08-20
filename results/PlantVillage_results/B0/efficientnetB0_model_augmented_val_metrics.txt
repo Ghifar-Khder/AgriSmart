@@ -1,0 +1,12 @@
+Evaluation Results - efficientnetB0_model_augmented - val
+========================================
+Evaluation Time: 205.94 seconds
+Total Samples: 8147
+
+Overall Metrics:
+Accuracy: 0.9888
+Precision: 0.9867
+Recall: 0.9834
+F1 Score: 0.9848
+
+Confusion matrices saved to evaluation_results

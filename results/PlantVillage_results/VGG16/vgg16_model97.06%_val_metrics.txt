@@ -1,0 +1,12 @@
+Evaluation Results - vgg16_model97.06% - val
+========================================
+Evaluation Time: 961.63 seconds
+Total Samples: 8147
+
+Overall Metrics:
+Accuracy: 0.9774
+Precision: 0.9750
+Recall: 0.9622
+F1 Score: 0.9673
+
+Confusion matrices saved to evaluation_results

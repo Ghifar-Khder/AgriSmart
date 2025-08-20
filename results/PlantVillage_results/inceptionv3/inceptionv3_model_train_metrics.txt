@@ -1,0 +1,12 @@
+Evaluation Results - inceptionv3_model - train
+========================================
+Evaluation Time: 9429.63 seconds
+Total Samples: 37991
+
+Overall Metrics:
+Accuracy: 0.9533
+Precision: 0.9447
+Recall: 0.9325
+F1 Score: 0.9368
+
+Confusion matrices saved to evaluation_results
