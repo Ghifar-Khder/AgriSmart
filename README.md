@@ -72,8 +72,11 @@ python interface/combined_interface.py
 # **THE DESIGNED INTERFACE:**
 
 
-![a](results\image.png)
+![**image**](results/image.png)
 
-![a](results\yield.png)
+**___________________________________________________________________________________________**
+
+
+![**yield**](results/yield.png)
 
 
