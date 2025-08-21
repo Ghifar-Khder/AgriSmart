@@ -6,10 +6,15 @@ A powerful machine learning tool designed to empower farmers by providing data-d
 
 ## Features
 
--   **Yield Estimation:** Predicts crop yield using key parameters like temperature, rainfall, and pesticide use.
--   **Disease Diagnosis:** Accurately classifies plant health from leaf images across 38 different classes.
--   **User-Friendly Interface:** Offers both individual and combined intuitive interfaces.
--   **Optimized Models:** Utilizes state-of-the-art  deep learning (EfficientNetB0) algorithms and machine learning (RandomForest) for best-in-class performance.
+- **Yield Estimation:** Predicts crop yield using key parameters like temperature, rainfall, and pesticide use. Powered by a highly accurate **RandomForest Regressor**, selected for its superior performance over other **ML algorithms**.
+
+- **Disease Diagnosis:** Accurately classifies plant health from leaf images across **38 different classes** using a state-of-the-art **EfficientNetB0** deep learning model, chosen after benchmarking against other pretrained networks.
+
+- **User-Friendly Interface:** Offers both individual and combined intuitive interfaces for seamless interaction with both prediction models.
+
+- **Optimized Models:** Utilizes competitively selected, state-of-the-art deep learning (**EfficientNetB0**) and machine learning (**RandomForest**) algorithms, ensuring best-in-class performance through a rigorous evaluation process.
+
+
 
 ## Results
 
