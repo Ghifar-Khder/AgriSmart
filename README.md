@@ -68,3 +68,12 @@ This project uses two separate datasets:
 Launch the unified interactive interface to use both models:
 ```bash
 python interface/combined_interface.py
+```
+# **THE DESIGNED INTERFACE:**
+
+
+![a](results\image.png)
+
+![a](results\yield.png)
+
+
