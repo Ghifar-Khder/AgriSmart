@@ -15,10 +15,10 @@ A powerful machine learning tool designed to empower farmers by providing data-d
 
 ### Plant Disease Classification (EfficientNetB0)
 The model achieved exceptional accuracy on the Plant Village dataset:
--   **Accuracy:** 99.02%
--   **Precision:** 98.79%
--   **Recall:** 98.70%
--   **F1 Score:** 98.73%
+-   **Accuracy:** 98.85%
+-   **Precision:** 98.58%
+-   **Recall:** 98.42%
+-   **F1 Score:** 98.47%
 
 ### Crop Yield Prediction (RandomForest Regressor)
 The yield prediction model demonstrated highly accurate results:
