@@ -426,7 +426,7 @@ section[data-testid="stSidebar"] {
 section[data-testid="stSidebar"] * { color: #f1faee !important; }
 section[data-testid="stSidebar"] hr { border-color: rgba(255,255,255,0.2); }
 
-div.stButton > button {
+div.stButton:not(:has(div[data-testid="stTooltipIcon"])) > button {
     background: linear-gradient(90deg, #1b4332, #40916c);
     color: white;
     border: none;
@@ -515,32 +515,15 @@ div[role="radiogroup"] label:has(input:checked) p {
 [data-testid="stNumberInput"] button svg {
     fill: #1b4332 !important;
 }
-div[data-testid="stWidgetLabel"] div[data-testid="stTooltipIcon"] button {
-    background: transparent !important;
-    background-color: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
-}
-
-div[data-testid="stWidgetLabel"] div[data-testid="stTooltipIcon"] svg {
-    fill: #1b4332 !important;
-}
-/* Strip background and shadow from every level of the tooltip icon */
-div[data-testid="stTooltipIcon"],
-div[data-testid="stTooltipIcon"] *,
-div[data-testid="stTooltipHoverTarget"],
-div[data-testid="stTooltipHoverTarget"] * {
-    background: none !important;
-    background-color: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
-}
-
-/* Ensure the '?' icon matches your dark green primary color */
-div[data-testid="stTooltipIcon"] svg,
-div[data-testid="stTooltipHoverTarget"] svg {
-    fill: #1b4332 !important;
-    color: #1b4332 !important;
+/* Strip button background and force transparent icons on screen & print */
+@media print, screen {
+    div[data-testid="stTooltipIcon"] button,
+    div[data-testid="stTooltipIcon"] button * {
+        background: transparent !important;
+        background-color: transparent !important;
+        box-shadow: none !important;
+        border: none !important;
+    }
 }
 </style>
 """, unsafe_allow_html=True)
