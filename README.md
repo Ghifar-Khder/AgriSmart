@@ -83,8 +83,7 @@ Evaluated on historical crop yield features:
 ├── .gitignore
 ├── README.md
 └── requirements.txt
-
----
+```
 
 ## Installation & Setup
 
