@@ -199,7 +199,7 @@ def preprocess_image(img):
 
 def format_class_name(name):
     formatted = name.replace('___', ': ').replace('_', ' ')
-    formatted = formatted.replace('(including sour)', '(incl. sour)')
+    formatted = formatted.replace('(including sour)', '('')')
     formatted = formatted.replace('maize', 'corn')
     formatted = formatted.replace('Haunglongbing', 'Huanglongbing')
     return formatted
