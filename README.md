@@ -1,6 +1,6 @@
 # Crop Disease Classification and Yield Prediction Platform
 
-**App Link:** [https://agri4444.streamlit.app/](https://gk-crops.streamlit.app/)
+**App Link:** [App Link](https://gk-crops.streamlit.app/)
 
 An integrated machine learning web application built with Streamlit for agricultural diagnostics and productivity forecasting. This platform combines deep learning computer vision for multi-class leaf disease identification with ensemble regression modeling for regional crop yield estimation.
 
