@@ -1,86 +1,85 @@
-# AgriSmart: Crop Yield Prediction & Plant Disease Detection
+# Crop Disease Classification and Yield Prediction Platform
 
-A powerful machine learning tool designed to empower farmers by providing data-driven insights for enhancing agricultural productivity. This project combines two predictive models into a single application:
-1.  **Crop Yield Prediction:** Estimates yield productivity (in hg/ha) based on environmental and agricultural inputs.
-2.  **Plant Disease Classification:** Identifies diseases from leaf images to enable early intervention.
+**App Link:** [https://agri4444.streamlit.app/](https://agri4444.streamlit.app/)
 
-## Features
+An integrated machine learning web application built with Streamlit for agricultural diagnostics and productivity forecasting. This platform combines deep learning computer vision for multi-class leaf disease identification with ensemble regression modeling for regional crop yield estimation.
 
-- **Yield Estimation:** Predicts crop yield using key parameters like temperature, rainfall, and pesticide use. Powered by a highly accurate **RandomForest Regressor**, selected for its superior performance over other **ML algorithms** for this specific task.
+---
 
-- **Disease Diagnosis:** Accurately classifies plant health from leaf images across **38 different classes** using a state-of-the-art **EfficientNetB0** deep learning model, chosen after benchmarking against other pretrained networks.
+**Technical Overview**
 
-- **User-Friendly Interface:** Offers both individual and combined intuitive interfaces for seamless interaction with both prediction models.
+The application unites two distinct machine learning pipelines into a single unified Streamlit interface:
 
-- **Optimized Models:** Utilizes competitively selected, state-of-the-art deep learning (**EfficientNetB0**) and machine learning (**RandomForest**) algorithms, ensuring best-in-class performance through a rigorous evaluation process.
+* **Plant Pathology Diagnosis:** Classifies leaf health across **38 distinct crop and disease categories** using a fine-tuned **EfficientNetB0** model. Features an integrated **Grad-CAM heatmap visualizer** to display the spatial activation regions guiding each visual prediction.
+* **Crop Yield Estimation:** Predicts agricultural productivity ($hg/ha$) based on regional climate factors (average rainfall, mean temperature) and management inputs (pesticide usage) using a **DecisionTree Regressor** pipeline.
 
+---
 
+**Model Evaluation & Performance**
 
-## Results
+*Plant Disease Classification (EfficientNetB0)*
 
-### Plant Disease Classification (EfficientNetB0)
-The model achieved exceptional accuracy on the Plant Village dataset:
--   **Accuracy:** 98.85%
--   **Precision:** 98.58%
--   **Recall:** 98.42%
--   **F1 Score:** 98.47%
+Evaluated on the PlantVillage dataset across 38 crop and disease classes:
 
-### Crop Yield Prediction (RandomForest Regressor)
-The yield prediction model demonstrated highly accurate results:
--   **R2 Score:** 0.974
--   **Mean Absolute Error (MAE):** 5706.45 hg/ha
--   **Root Mean Squared Error (RMSE):** 13528.55 hg/ha
+| Metric | Score |
+| :--- | :--- |
+| **Accuracy** | 98.85% |
+| **Precision** | 98.58% |
+| **Recall** | 98.42% |
+| **F1 Score** | 98.47% |
 
-## Installation & Setup
+*Crop Yield Prediction (DecisionTree Regressor)*
 
-1.  **Clone the repository**
-    ```bash
-    git clone https://github.com/Ghifar-Khder/AgriSmart.git
-    cd AgriSmart
-    ```
+Evaluated on historical crop yield features:
 
-2.  **Install dependencies**
-    ```bash
-    pip install -r requirements.txt
-    ```
+| Metric | Score |
+| :--- | :--- |
+| **$R^2$ Score** | 0.974 |
+| **Mean Absolute Error (MAE)** | 5,706.45 $hg/ha$ |
+| **Root Mean Squared Error (RMSE)** | 13,528.55 $hg/ha$ |
 
-## Dataset Setup
+---
 
-This project uses two separate datasets:
+**System Architecture & File Layout**
 
-1.  **Crop Yield Prediction Dataset**
-    -   Download from: [Kaggle - Crop Yield Prediction Dataset](https://www.kaggle.com/datasets/patelris/crop-yield-prediction-dataset)
-    -   The preprocessing code will split this into train/validation/test sets.
-
-2.  **PlantVillage Dataset (for disease classification)**
-    -   Download from: [Kaggle - PlantVillage Dataset](https://www.kaggle.com/datasets/abdallahalidev/plantvillage-dataset)
-    -   The preprocessing code will split this into train/validation/test sets.
-
-**Important Setup Notes:**
--   The datasets are not stored in this repository due to their size.
--   After downloading the datasets, you must update all file paths in the code to match your local directory structure.
--   The preprocessing scripts will automatically create the train/validation/test splits.
--   Paths for saving models and results also need to be configured to your local environment.
-
-## Usage
-
-### Running the Combined Application (Recommended)
-Launch the unified interactive interface to use both models:
-```bash
-python interface/combined_interface.py
-```
-# **THE DESIGNED INTERFACE:**
-
-
-![**image**](results/image.png)
-
-**___________________________________________________________________________________________**
-
-
-![**yield**](results/yield.png)
-
-
-## Contact
-For questions or suggestions, please contact:
-- Ghifar Khder: ghifarkhoder444@gmail.com
-- Project Repository: https://github.com/Ghifar-Khder/AgriSmart
+```text
+.
+├── .streamlit/
+│   └── config.toml
+├── models/
+│   ├── DecisionTree_best.pkl
+│   ├── efficientnetB0_model_augmented.keras
+│   └── preprocessor.pkl
+├── results/
+│   ├── PlantVillage_results/
+│   │   ├── B0/
+│   │   ├── B1/
+│   │   ├── VGG16/
+│   │   ├── inceptionv3/
+│   │   ├── mobilenetv2/
+│   │   └── resnet50/
+│   ├── yield_prediction-results/
+│   ├── image.png
+│   └── yield.png
+├── src/
+│   ├── interface/
+│   │   ├── app.py
+│   │   ├── combined_interface.py
+│   │   └── image_interface.py
+│   ├── PlantVillage-codes/
+│   │   ├── models-training/
+│   │   │   ├── ResNet50.py
+│   │   │   ├── VGG16.py
+│   │   │   ├── efficientnetB0.py
+│   │   │   ├── efficientnetB1.py
+│   │   │   ├── inception_V3.py
+│   │   │   └── mobilenet_V2.py
+│   │   ├── data_split.py
+│   │   └── test.py
+│   └── yield_prediction-codes/
+│       ├── split.py
+│       ├── train.py
+│       └── test.py
+├── .gitignore
+├── README.md
+└── requirements.txt
