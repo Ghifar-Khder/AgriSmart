@@ -515,10 +515,15 @@ div[role="radiogroup"] label:has(input:checked) p {
 [data-testid="stNumberInput"] button svg {
     fill: #1b4332 !important;
 }
-div[data-testid="stTooltipIcon"] button {
+div[data-testid="stWidgetLabel"] div[data-testid="stTooltipIcon"] button {
     background: transparent !important;
+    background-color: transparent !important;
     border: none !important;
     box-shadow: none !important;
+}
+
+div[data-testid="stWidgetLabel"] div[data-testid="stTooltipIcon"] svg {
+    fill: #1b4332 !important;
 }
 </style>
 """, unsafe_allow_html=True)
