@@ -531,7 +531,7 @@ with st.sidebar:
     st.markdown("#### 🌾 Yield Predictor")
     st.markdown("Enter climate and crop details to estimate expected yield in hg/ha.")
     st.markdown("---")
-    st.caption("SVU")
+    st.caption("Ghifar Khder")
 
 
 # ========================
