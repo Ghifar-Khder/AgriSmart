@@ -525,6 +525,23 @@ div[data-testid="stWidgetLabel"] div[data-testid="stTooltipIcon"] button {
 div[data-testid="stWidgetLabel"] div[data-testid="stTooltipIcon"] svg {
     fill: #1b4332 !important;
 }
+/* Strip background and shadow from every level of the tooltip icon */
+div[data-testid="stTooltipIcon"],
+div[data-testid="stTooltipIcon"] *,
+div[data-testid="stTooltipHoverTarget"],
+div[data-testid="stTooltipHoverTarget"] * {
+    background: none !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* Ensure the '?' icon matches your dark green primary color */
+div[data-testid="stTooltipIcon"] svg,
+div[data-testid="stTooltipHoverTarget"] svg {
+    fill: #1b4332 !important;
+    color: #1b4332 !important;
+}
 </style>
 """, unsafe_allow_html=True)
 
