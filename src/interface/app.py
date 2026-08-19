@@ -7,11 +7,11 @@ from PIL import Image
 import numpy as np
 import cv2
 import io
-
+import os
 # ========================
 # CONFIG
 # ========================
-import os
+
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))       # .../src/interface
 MODELS_DIR = os.path.join(BASE_DIR, "..", "..", "models")   # repo_root/models
