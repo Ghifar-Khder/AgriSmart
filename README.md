@@ -44,8 +44,8 @@ Evaluated on historical crop yield features:
 
 ```text
 .
+├── .devcontainer/
 ├── .streamlit/
-│   └── config.toml
 ├── models/
 │   ├── DecisionTree_best.pkl
 │   ├── efficientnetB0_model_augmented.keras
@@ -59,30 +59,14 @@ Evaluated on historical crop yield features:
 │   │   ├── mobilenetv2/
 │   │   └── resnet50/
 │   ├── yield_prediction-results/
-│   ├── image.png
-│   └── yield.png
+│   ├── yield-i.jpeg
+│   └── yield.jpeg
 ├── src/
-│   ├── interface/
-│   │   ├── app.py
-│   │   ├── combined_interface.py
-│   │   └── image_interface.py
 │   ├── PlantVillage-codes/
-│   │   ├── models-training/
-│   │   │   ├── ResNet50.py
-│   │   │   ├── VGG16.py
-│   │   │   ├── efficientnetB0.py
-│   │   │   ├── efficientnetB1.py
-│   │   │   ├── inception_V3.py
-│   │   │   └── mobilenet_V2.py
-│   │   ├── data_split.py
-│   │   └── test.py
+│   ├── interface/
 │   └── yield_prediction-codes/
-│       ├── split.py
-│       ├── train.py
-│       └── test.py
 ├── .gitignore
-├── README.md
-└── requirements.txt
+└── README.md
 ```
 
 ## Installation & Setup
