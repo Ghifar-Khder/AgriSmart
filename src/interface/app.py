@@ -426,17 +426,19 @@ section[data-testid="stSidebar"] {
 section[data-testid="stSidebar"] * { color: #f1faee !important; }
 section[data-testid="stSidebar"] hr { border-color: rgba(255,255,255,0.2); }
 
-div.stButton:not(:has(div[data-testid="stTooltipIcon"])) > button {
-    background: linear-gradient(90deg, #1b4332, #40916c);
-    color: white;
-    border: none;
-    border-radius: 12px;
-    padding: 0.6rem 1.5rem;
-    font-weight: 600;
-    font-family: 'Poppins', sans-serif;
-    transition: all 0.2s ease;
-    width: 100%;
+/* Style main app buttons */
+div.stButton > button {
+    background: linear-gradient(90deg, #1b4332, #40916c) !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 12px !important;
+    padding: 0.6rem 1.5rem !important;
+    font-weight: 600 !important;
+    font-family: 'Poppins', sans-serif !important;
+    transition: all 0.2s ease !important;
+    width: 100% !important;
 }
+
 div.stButton > button:hover {
     transform: translateY(-2px);
     box-shadow: 0 8px 18px rgba(27,67,50,0.3);
@@ -515,15 +517,20 @@ div[role="radiogroup"] label:has(input:checked) p {
 [data-testid="stNumberInput"] button svg {
     fill: #1b4332 !important;
 }
-/* Strip button background and force transparent icons on screen & print */
-@media print, screen {
-    div[data-testid="stTooltipIcon"] button,
-    div[data-testid="stTooltipIcon"] button * {
-        background: transparent !important;
-        background-color: transparent !important;
-        box-shadow: none !important;
-        border: none !important;
-    }
+/* Remove button styles specifically from tooltips */
+div[data-testid="stWidgetLabel"] button,
+div[data-testid="stTooltipIcon"] button,
+button[data-testid="stTooltipHoverTarget"] {
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    width: auto !important;
+    height: auto !important;
+}
 }
 </style>
 """, unsafe_allow_html=True)
