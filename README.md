@@ -1,4 +1,3 @@
-```text
 # Crop Disease Classification and Yield Prediction Platform
 
 **App Link:** [https://agri4444.streamlit.app/](https://agri4444.streamlit.app/)
@@ -122,5 +121,3 @@ pip install -r requirements.txt
 * **Developer:** Ghifar Khder
 * **Email:** ghifarkhder2000@gmail.com
 * **Repository:** https://github.com/Ghifar-Khder/crop-disease-yield-prediction
-
-```
