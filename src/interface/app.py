@@ -688,6 +688,6 @@ with tab2:
 
 st.markdown("<br>", unsafe_allow_html=True)
 st.markdown("---")
-st.markdown('<p style="text-align:center;color:#95a99c;font-size:0.85rem;">Crop Productivity · SVU</p>', unsafe_allow_html=True)
+st.markdown('<p style="text-align:center;color:#95a99c;font-size:0.85rem;">Crop Productivity · GHIFAR_KHDER</p>', unsafe_allow_html=True)
 
 # streamlit run app2.py
