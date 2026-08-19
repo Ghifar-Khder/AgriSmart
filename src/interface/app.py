@@ -305,11 +305,9 @@ st.markdown("""
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap');
 
-html, body, [class*="css"]  { font-family: 'Inter', sans-serif; }
+html, body, [class*="css"] { font-family: 'Inter', sans-serif; }
 
-#MainMenu {visibility: hidden;}
-footer {visibility: hidden;}
-header {visibility: hidden;}
+#MainMenu, footer, header { visibility: hidden; }
 
 .stApp {
     background: linear-gradient(180deg, #f4faf6 0%, #eef6f0 100%);
@@ -341,6 +339,7 @@ header {visibility: hidden;}
     margin-bottom: 0.4rem;
 }
 
+/* Tabs Styling */
 .stTabs [data-baseweb="tab-list"] {
     gap: 8px;
     background: #ffffff;
@@ -363,6 +362,7 @@ header {visibility: hidden;}
     color: white !important;
 }
 
+/* Cards & Metrics */
 .result-card-healthy, .result-card-disease {
     border-radius: 18px;
     padding: 1.5rem 1.7rem;
@@ -383,16 +383,6 @@ header {visibility: hidden;}
     font-size: 1.4rem;
     color: #1b1b1b;
     margin-bottom: 0.5rem;
-}
-
-.confidence-badge {
-    display: inline-block;
-    padding: 4px 14px;
-    border-radius: 20px;
-    background: #1b4332;
-    color: white;
-    font-weight: 600;
-    font-size: 0.85rem;
 }
 
 .metric-box {
@@ -420,13 +410,14 @@ header {visibility: hidden;}
     font-size: 0.95rem;
 }
 
+/* Sidebar Styling */
 section[data-testid="stSidebar"] {
     background: linear-gradient(180deg, #1b4332, #2d6a4f);
 }
 section[data-testid="stSidebar"] * { color: #f1faee !important; }
 section[data-testid="stSidebar"] hr { border-color: rgba(255,255,255,0.2); }
 
-/* Style main app buttons */
+/* Main Action Buttons Only */
 div.stButton > button {
     background: linear-gradient(90deg, #1b4332, #40916c) !important;
     color: white !important;
@@ -442,20 +433,13 @@ div.stButton > button {
 div.stButton > button:hover {
     transform: translateY(-2px);
     box-shadow: 0 8px 18px rgba(27,67,50,0.3);
-    color: white;
+    color: white !important;
 }
 
-.stProgress > div > div > div > div {
-    background: linear-gradient(90deg, #40916c, #95d5b2);
-}
+/* Inputs & Form Controls */
+[data-testid="stFileUploader"] { border-radius: 16px; }
 
-[data-testid="stFileUploader"] {
-    border-radius: 16px;
-}
-
-div[role="radiogroup"] {
-    gap: 6px;
-}
+div[role="radiogroup"] { gap: 6px; }
 div[role="radiogroup"] label {
     background: #ffffff;
     border: 1px solid #d8e5dc;
@@ -468,9 +452,7 @@ div[role="radiogroup"] label:has(input:checked) {
     background: linear-gradient(90deg, #1b4332, #40916c);
     border-color: #1b4332;
 }
-div[role="radiogroup"] label:has(input:checked) p {
-    color: white !important;
-}
+div[role="radiogroup"] label:has(input:checked) p { color: white !important; }
 
 .info-panel {
     background: #ffffff;
@@ -482,7 +464,7 @@ div[role="radiogroup"] label:has(input:checked) p {
     line-height: 1.6;
 }
 
-/* Force readable widget colors regardless of the browser/OS light-dark theme */
+/* Force Light Field Inputs */
 [data-testid="stNumberInput"] input,
 [data-testid="stTextInput"] input,
 [data-baseweb="input"] input,
@@ -498,11 +480,8 @@ div[role="radiogroup"] label:has(input:checked) p {
 }
 [data-baseweb="select"] div,
 [data-baseweb="select"] span,
-[data-baseweb="select"] p {
-    color: #1b1b1b !important;
-}
-[data-baseweb="popover"] li,
-[role="listbox"] {
+[data-baseweb="select"] p { color: #1b1b1b !important; }
+[data-baseweb="popover"] li, [role="listbox"] {
     background-color: #ffffff !important;
     color: #1b1b1b !important;
 }
@@ -514,22 +493,24 @@ div[role="radiogroup"] label:has(input:checked) p {
 [data-testid="stCaptionContainer"] p {
     color: #6b8577 !important;
 }
-[data-testid="stNumberInput"] button svg {
-    fill: #1b4332 !important;
-}
-/* Remove button styles specifically from tooltips */
-div[data-testid="stWidgetLabel"] button,
-div[data-testid="stTooltipIcon"] button,
-button[data-testid="stTooltipHoverTarget"] {
+
+/* 🎯 EXPLICIT TOOLTIP STRIPPING FIX */
+div[data-testid="stTooltipIcon"],
+div[data-testid="stTooltipIcon"] *,
+button[data-testid="stTooltipHoverTarget"],
+button[data-testid="stTooltipHoverTarget"] * {
     background: transparent !important;
     background-color: transparent !important;
     background-image: none !important;
     border: none !important;
-    border-radius: 0 !important;
     box-shadow: none !important;
-    padding: 0 !important;
-    width: auto !important;
-    height: auto !important;
+    outline: none !important;
+}
+
+div[data-testid="stTooltipIcon"] svg,
+button[data-testid="stTooltipHoverTarget"] svg {
+    fill: #1b4332 !important;
+    color: #1b4332 !important;
 }
 </style>
 """, unsafe_allow_html=True)
