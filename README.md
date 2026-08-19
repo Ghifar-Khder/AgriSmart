@@ -43,7 +43,6 @@ Evaluated on historical crop yield features:
 ## System Architecture & File Layout
 
 ```text
-.
 ├── .streamlit/
 │   └── config.toml
 ├── models/
