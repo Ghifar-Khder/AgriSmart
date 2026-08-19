@@ -6,7 +6,7 @@ An integrated machine learning web application built with Streamlit for agricult
 
 ---
 
-**Technical Overview**
+## Technical Overview
 
 The application unites two distinct machine learning pipelines into a single unified Streamlit interface:
 
@@ -15,9 +15,9 @@ The application unites two distinct machine learning pipelines into a single uni
 
 ---
 
-**Model Evaluation & Performance**
+## Model Evaluation & Performance
 
-*Plant Disease Classification (EfficientNetB0)*
+### Plant Disease Classification (EfficientNetB0)
 
 Evaluated on the PlantVillage dataset across 38 crop and disease classes:
 
@@ -28,7 +28,7 @@ Evaluated on the PlantVillage dataset across 38 crop and disease classes:
 | **Recall** | 98.42% |
 | **F1 Score** | 98.47% |
 
-*Crop Yield Prediction (DecisionTree Regressor)*
+### Crop Yield Prediction (DecisionTree Regressor)
 
 Evaluated on historical crop yield features:
 
@@ -40,7 +40,7 @@ Evaluated on historical crop yield features:
 
 ---
 
-**System Architecture & File Layout**
+## System Architecture & File Layout
 
 ```text
 .
