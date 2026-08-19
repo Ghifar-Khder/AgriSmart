@@ -1,3 +1,4 @@
+```text
 # Crop Disease Classification and Yield Prediction Platform
 
 **App Link:** [https://agri4444.streamlit.app/](https://agri4444.streamlit.app/)
@@ -11,7 +12,7 @@ An integrated machine learning web application built with Streamlit for agricult
 The application unites two distinct machine learning pipelines into a single unified Streamlit interface:
 
 * **Plant Pathology Diagnosis:** Classifies leaf health across **38 distinct crop and disease categories** using a fine-tuned **EfficientNetB0** model. Features an integrated **Grad-CAM heatmap visualizer** to display the spatial activation regions guiding each visual prediction.
-* **Crop Yield Estimation:** Predicts agricultural productivity ($hg/ha$) based on regional climate factors (average rainfall, mean temperature) and management inputs (pesticide usage) using a **DecisionTree Regressor** pipeline.
+* **Crop Yield Estimation:** Predicts agricultural productivity (hg/ha) based on regional climate factors (average rainfall, mean temperature) and management inputs (pesticide usage) using a **DecisionTree Regressor** pipeline.
 
 ---
 
@@ -34,15 +35,14 @@ Evaluated on historical crop yield features:
 
 | Metric | Score |
 | :--- | :--- |
-| **$R^2$ Score** | 0.974 |
-| **Mean Absolute Error (MAE)** | 5,706.45 $hg/ha$ |
-| **Root Mean Squared Error (RMSE)** | 13,528.55 $hg/ha$ |
+| **R² Score** | 0.974 |
+| **Mean Absolute Error (MAE)** | 5,706.45 hg/ha |
+| **Root Mean Squared Error (RMSE)** | 13,528.55 hg/ha |
 
 ---
 
 ## System Architecture & File Layout
 
-```text
 .
 ├── .streamlit/
 │   └── config.toml
@@ -83,3 +83,44 @@ Evaluated on historical crop yield features:
 ├── .gitignore
 ├── README.md
 └── requirements.txt
+
+---
+
+## Installation & Setup
+
+### Clone Repository & Setup Environment
+
+git clone https://github.com/Ghifar-Khder/crop-disease-yield-prediction.git
+cd crop-disease-yield-prediction
+
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+### Install Dependencies
+
+pip install -r requirements.txt
+
+---
+
+## Datasets Used
+
+* **Plant Pathology Dataset:** PlantVillage Dataset on Kaggle (https://www.kaggle.com/datasets/abdallahalidev/plantvillage-dataset)
+* **Agricultural Yield Dataset:** Crop Yield Prediction Dataset on Kaggle (https://www.kaggle.com/datasets/patelris/crop-yield-prediction-dataset)
+
+---
+
+## User Interface
+
+![Plant Pathology Interface](results/image.png)
+
+![Yield Prediction Interface](results/yield.png)
+
+---
+
+## Contact
+
+* **Developer:** Ghifar Khder
+* **Email:** ghifarkhder2000@gmail.com
+* **Repository:** https://github.com/Ghifar-Khder/crop-disease-yield-prediction
+
+```
