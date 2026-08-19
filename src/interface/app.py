@@ -11,9 +11,14 @@ import io
 # ========================
 # CONFIG
 # ========================
-DISEASE_MODEL_PATH = r"efficientnetB0_model_augmented.keras"
-YIELD_MODEL_PATH = r"RandomForest_best.pkl"
-PREPROCESSOR_PATH = r"preprocessor.pkl"
+import os
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))       # .../src/interface
+MODELS_DIR = os.path.join(BASE_DIR, "..", "..", "models")   # repo_root/models
+
+DISEASE_MODEL_PATH = os.path.join(MODELS_DIR, "efficientnetB0_model_augmented.keras")
+YIELD_MODEL_PATH = os.path.join(MODELS_DIR, "DecisionTree_best.pkl")
+PREPROCESSOR_PATH = os.path.join(MODELS_DIR, "preprocessor.pkl")
 
 CLASS_NAMES = [
     'Apple___Apple_scab','Apple___Black_rot','Apple___Cedar_apple_rust','Apple___healthy',
