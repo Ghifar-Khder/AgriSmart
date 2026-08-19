@@ -110,9 +110,9 @@ pip install -r requirements.txt
 
 ## User Interface
 
-![Plant Pathology Interface](results/image.png)
+![Plant Pathology Interface](results/image.jpeg)
 
-![Yield Prediction Interface](results/yield.png)
+![Yield Prediction Interface](results/yield.jpeg)
 
 ---
 
