@@ -531,7 +531,6 @@ button[data-testid="stTooltipHoverTarget"] {
     width: auto !important;
     height: auto !important;
 }
-}
 </style>
 """, unsafe_allow_html=True)
 
